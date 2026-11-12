@@ -29,7 +29,7 @@
                 <a href="?lang=en" class="btn btn-outline-light">EN</a>
             </div>
         </div>
-    </div>
+    </div> 
 </nav>
 
 <div class="container my-5">
@@ -54,9 +54,9 @@
                         <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modalCV">
                             <spring:message code="hero.btn.perfil"/>
                         </button>
-                        <a href="${pageContext.request.contextPath}/docs/CV_Daniela_Sanluis.pdf" target="_blank" class="btn btn-outline-primary btn-sm">
-                            <spring:message code="hero.btn.cv"/>
-                        </a>
+                       <a href="${pageContext.request.contextPath}/docs/<spring:message code='cv.archivo'/>" target="_blank" class="btn btn-outline-primary btn-sm">
+						    <spring:message code="hero.btn.cv"/>
+						</a>
                         <a href="https://github.com/DanielaSanluis" target="_blank" class="btn btn-outline-secondary btn-sm">
                             GitHub
                         </a>
@@ -151,30 +151,30 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body p-4">
-                <h4 class="fw-bold text-primary mb-1">Daniela Alejandra San Luis Castillo</h4>
-                <p class="text-muted mb-3">Software Developer | Lic. en Ciencias de la Computación (Facultad de Ciencias, UNAM)</p>
+                <h4 class="fw-bold text-primary mb-1">Daniela Alejandra Sanluis Castillo</h4>
+                <p class="text-muted mb-3"><spring:message code="modal.cv.subtitulo"/></p>
                 <hr>
-                <h6 class="fw-bold text-uppercase text-secondary">Educación</h6>
+                <h6 class="fw-bold text-uppercase text-secondary"><spring:message code="modal.cv.educacion"/></h6>
                 <p class="mb-3">
-                    <strong>Licenciatura en Ciencias de la Computación</strong> — Universidad Nacional Autónoma de México (UNAM, Facultad de Ciencias) | 2022 – Presente (Último semestre)<br>
-                    <strong>Bachillerato</strong> — Colegio de Ciencias y Humanidades (CCH Plantel Naucalpan, UNAM) | 2020 – 2023
+                    <spring:message code="modal.cv.edu1"/><br>
+                    <spring:message code="modal.cv.edu2"/>
                 </p>
-                <h6 class="fw-bold text-uppercase text-secondary">Habilidades Técnicas</h6>
+                <h6 class="fw-bold text-uppercase text-secondary"><spring:message code="modal.cv.habilidades"/></h6>
                 <ul class="mb-3">
-                    <li><strong>Lenguajes:</strong> Python, Java, SQL, JavaScript, C++</li>
-                    <li><strong>Frameworks & Libs:</strong> Spring Boot, React, React Native, Expo, Django, Quarto, Bootstrap, jQuery</li>
-                    <li><strong>Bases de Datos & Herramientas:</strong> PostgreSQL, MySQL, Docker, Git/GitHub, Jupyter Notebook, LaTeX</li>
-                    <li><strong>Sistemas Operativos:</strong> Linux (Fedora), Windows</li>
+                    <li><strong><spring:message code="modal.cv.hab.lenguajes"/></strong> Python, Java, SQL, JavaScript, C++</li>
+                    <li><strong><spring:message code="modal.cv.hab.frameworks"/></strong> Spring Boot, React, React Native, Expo, Django, Quarto, Bootstrap, jQuery</li>
+                    <li><strong><spring:message code="modal.cv.hab.bd"/></strong> PostgreSQL, MySQL, Docker, Git/GitHub, Jupyter Notebook, LaTeX</li>
+                    <li><strong><spring:message code="modal.cv.hab.so"/></strong> Linux (Fedora), Windows</li>
                 </ul>
-                <h6 class="fw-bold text-uppercase text-secondary">Proyectos Destacados</h6>
+                <h6 class="fw-bold text-uppercase text-secondary"><spring:message code="modal.cv.proyectos"/></h6>
                 <ul class="mb-0">
-                    <li><strong>ClinicaMente:</strong> App móvil de psicología con React Native, Expo, TypeScript y PostgreSQL.</li>
-                    <li><strong>Minería de Datos & Clustering (Salud Pública México):</strong> Análisis estadístico y reportes interactivos con Python, Pandas y Quarto.</li>
-                    <li><strong>Plataforma Web (TDI):</strong> Arquitecturas cliente-servidor con Django, Spring Boot, PostgreSQL/MySQL y Docker.</li>
+                    <li><spring:message code="modal.cv.proy1"/></li>
+                    <li><spring:message code="modal.cv.proy2"/></li>
+                    <li><spring:message code="modal.cv.proy3"/></li>
                 </ul>
             </div>
             <div class="modal-footer">
-                <a href="${pageContext.request.contextPath}/docs/CV_Daniela_Sanluis.pdf" download class="btn btn-primary">
+                <a href="${pageContext.request.contextPath}/docs/<spring:message code='cv.archivo'/>" download class="btn btn-primary">
                     <spring:message code="modal.cv.descargar"/>
                 </a>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
@@ -184,7 +184,6 @@
         </div>
     </div>
 </div>
-
 <!-- Modal de Confirmación de Eliminación -->
 <div class="modal fade" id="modalEliminar" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">

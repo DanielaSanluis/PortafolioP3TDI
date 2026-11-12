@@ -72,4 +72,4 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/app.js"></script>
 </body>
-</html>
+</html> 
